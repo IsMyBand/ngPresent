@@ -1,0 +1,139 @@
+<!doctype html>
+<html>
+  <head>
+    
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>impress.js | presentation tool based on the power of CSS3 transforms and transitions in modern browsers | by Bartek Szopka @bartaz</title>
+    <meta name="description" content="impress.js is a presentation tool based on the power of CSS3 transforms and transitions in modern browsers and inspired by the idea behind prezi.com." />
+    <meta name="author" content="Bartek Szopka" />
+    <link href='http://fonts.googleapis.com/css?family=Vollkorn:400,700' rel='stylesheet' type='text/css'>
+      <link rel="stylesheet" href="css/impress-TFA.css"  />
+      <link rel="stylesheet" href="lib/faws/css/font-awesome.min.css"/>
+      <link rel="stylesheet" href="lib/animate.css"/>
+      <link rel="shortcut icon" href="favicon.png" />
+      <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    </head>
+    <body ng-app>
+      
+      <div id="impress">
+        <!--  Begin 4 slides  -->
+        <!-- Intro Slide  -->
+        <div id="Intro"  class="step opacity slide oneColm" data-x="0" data-y="0"  >
+          <img class="introImages animated bounceInRight" src="img/AngularJS-large.png" /><br>
+          <img  class="introImages animated bounceInLeft "  src="img/tfaLarge.jpg" width="500" />
+        </div>
+        <div id="define" class="step opacity slide oneColm" data-x="1100" data-y="0" >
+          <div class="title animated pulse">What's AngularJS?</div>
+          <p>
+          <i class="fa fa-quote-left fa-3x pull-left fa-border"></i>
+          <b>AngularJS</b>, is a client-side
+          <b class="underline"><b class="js">J</b>ava<b class="js">S</b>cript</b>
+          framework that lets you extend HTML vocabulary for your application.
+          </p>
+        </div>
+        
+        <!-- GitHub Slide -->
+        <div id="github" class="step opacity slide twoColm" data-x="0" data-y="700"  >
+          <img src="img/gitHubCompare.png" width="900" height="520" />
+        </div>
+        
+        <!-- Google Trend Slide -->
+        <div id="googleTrend" class="step opacity slide twoColm" data-x="1100" data-y="700">
+          <img src="img/googleTrend.png" width="900" height="500" />
+        </div>
+        <!--  End 4 slides  -->
+        <!-- Get Ready  -->
+        <div id="ready" class="step opacity em5" data-x="500" data-y="1800"  data-rotate="90" data-scale="3">
+          
+          <i class="fa fa-comments-o fa-2x" style="color:white; "></i>
+          <h6>YOU</h6>
+          <h6>STILL</h6>
+          <h6>ASK</h6>
+          <h6>WHY?</h6>
+        </div>
+        <!-- Two Way Data Binding  -->
+        <div id="twoWay" class="step opacity words" data-x="-1000" data-y="2700" data-z="-2000">
+          <i class="fa fa-arrows-h fa-5x" style="color:#5F5293;"></i>
+          <div class="em9">TWO WAY</div>
+          <div class="em6">DATA BINDING</div>
+        </div>
+       
+        <div id="compare" class="step slideNew opacity code" data-x="-1600" data-y="4200"  data-rotate="90"  >
+          <div class="model">
+          <img src="img/smbb.png" class="imgCenter" alt="">
+            <h1 class="textCenter colorTitle"> BackBone.js</h1>
+            <img src="img/BBSample.png" >
+          </div>
+          <div class="model">
+          <div class="vsDivider">
+            <div class="vs">
+              V.S.
+            </div>  
+          </div>
+          </div>
+          <div class="model">
+            <img src="img/smng.png"  class="imgCenter" alt="">
+            <h1 class="textCenter colorTitle">AngularbJS</h1>
+            <img src="img/NGSample.png">
+            <p class="em15">
+            Name: <input type="text" ng-model="input" size="40"><br>
+            Hello <b>{{input}}</b>
+            </p>
+          </div>
+          <div class="clearfix"></div>
+          <div class="model">
+            <ul class="fa-ul">
+              <li><i class="fa-li fa fa-slack"></i>Less DOM manipulation</li>
+              <li><i class="fa-li fa fa-terminal"></i>Less code</li>
+              <li><i class="fa-li fa fa-bug"></i>Less Bugs</li>
+            </ul>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+
+
+        <!-- Template & Directives -->
+        <div id="templateDirectives" class="step opacity words" data-x="0" data-y="2700" data-z="-2000" >
+          <i class="fa fa-list-alt fa-5x" style="color:#5F5293;"></i>
+          <div class="em9">Template</div>
+          <div class="em1 textCenter ">&amp; </div>
+          <div class="em85">Directives</div>
+        </div>
+        <div id="detailTempDirec" class="step slideNew opacity code" data-x="-500" data-y="4300"  data-rotate="90" data-scale="1">
+       
+          <div class="model">
+            <h2>BackBone.js</h2>
+            <img src="img/BBSample.png" >
+          </div>
+          <div class="model">
+            <h2>AngularJS</h2>
+            <img src="img/NGSample.png">
+            <p>
+            Name: <input type="text" ng-model="input">
+            Hello {{input}} !
+            </p>
+
+          </div>
+          <div class="clearfix"></div>
+        </div>
+
+        <!-- Dependency Injection-->
+        <div class="step opacity words" data-x="0"  data-y="3300" data-z="100" >
+          <i class="fa fa fa-link fa-5x" style="color:#5F5293;"></i>
+          <div class="em7">Dependency</div>
+          <div class="em9">Injection</div>
+        </div>
+        <!-- Testing -->
+        <div class="step opacity words" data-x="1000" data-y="3300" data-z="100">
+          <i class="fa fa-check-square-o" style="color:#5F5293; font-size:7em;"></i>
+          <div class="em13">Testing</div>
+        </div>
+      </div>
+      <script src="lib/impress.js"></script>
+      <script src="lib/jquery-2.1.1.min.js"></script>
+      <script src="lib/angular.min.js"></script>
+      <script src="js/custom.js"></script>
+    </body>
+  </html>
