@@ -43,7 +43,7 @@ body{
     padding: 12px; 
     box-shadow: 1px 1px 1px #413a3a; 
     width: 900px;
-    height: 500px;
+    height: 700px;
 }
 .model{
     float: left; 
@@ -212,6 +212,29 @@ h1,h2,h3,h4,h5,h6 {margin:0;color: #373737;}
 .imgCenter{  
     display:block;
     margin:auto;
+}
+
+
+/* substep*/
+
+.impress-enabled .substep {
+  opacity: 0;
+  -webkit-transition: all 1s;
+  -moz-transition:    all 1s;
+  -ms-transition:     all 1s;
+  -o-transition:      all 1s;
+  transition:         all 1s;  
+}
+
+.impress-enabled .substep.active {
+  opacity: 1;
+}
+
+/*.impress-enabled .substep.present { 
+  color: rgb(100, 135, 195);
+}*/
+.impress-enabled .substep.past {
+  opacity: .5;
 }
 
 
