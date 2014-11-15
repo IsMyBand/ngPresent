@@ -1,17 +1,20 @@
 $(document).ready(function() {
-    impress().init(); //initialize impress.js 
+    impress().init(); //starts impress.js 
 
-    // Entering State 
+    // Entering State  (step)
     window.addEventListener('impress:stepenter', function() {
+
         // #Ready starts animation
         $('#ready.active').parents().find(".oneColm").animate({
             top: "-50px",
             opacity: .7
         }, 250);
+
         $('#ready.active').parents().find(".twoColm").animate({
             top: "-500px",
             opacity: 1
         }, 250);
+
         $('#ready.active').animate({
             top: "-700px"
         }, 450).find(".fa-comments-o").show().addClass("animated bounceInRight");
@@ -35,6 +38,7 @@ $(document).ready(function() {
             .animate({
                 left: "0"
             }, 900);
+
         $("#compare.active .vsDivider").addClass("animated rotateIn");
 
         //how? 
@@ -42,15 +46,20 @@ $(document).ready(function() {
         $("#how.active img").addClass("animated rotateIn");
 
         // why? 
-
         $("#why.active .fa").addClass("animated tada");
+
+        // Test for all 
+        $("#TestAll.present .land").animate({
+            top: "-30",
+            left: "30%"
+        }, 1000);
+
+     
+
 
     });
 
-
-
-
-    //Leaving state
+    //Leaving state (step)
     window.addEventListener('impress:stepleave', function() {
 
         //Ready Animation returns back 
@@ -89,7 +98,30 @@ $(document).ready(function() {
         // why?
         $("#why.past .fa").removeClass("animated tada");
 
-
+        //returns back the rocket in TestAll
+        $("#TestAll.past .land").animate({
+            top: "60%",
+            left: "70px"
+        }, 1000);
     });
+
+    //entering state (substep)
+    window.addEventListener('impress:substep-active', function () {
+        $(".fly.present").animate({
+            top: "-20px",
+            left: "140%",
+        }, 200);
+        $(".explode.present").parent().find(".imgBrowser").hide();
+    });
+
+    //leaving state (substep)
+    window.addEventListener('impress:substep-inactive', function () {
+        // $(".explode.past").parent().find(".imgBrowser").show();
+        $('.fly.future').css({
+                    top: "60%",
+                    left: "70px"
+                });
+    });
+
 
 });

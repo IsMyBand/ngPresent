@@ -9,11 +9,10 @@
     <meta name="description" content="impress.js is a presentation tool based on the power of CSS3 transforms and transitions in modern browsers and inspired by the idea behind prezi.com." />
     <meta name="author" content="Bartek Szopka" />
     <link href='http://fonts.googleapis.com/css?family=Vollkorn:400,700' rel='stylesheet' type='text/css'>
-      <link rel="stylesheet" href="css/impress-TFA.css"  />
-      <link rel="stylesheet" href="lib/faws/css/font-awesome.min.css"/>
-      <link rel="stylesheet" href="lib/animate.css"/>
-      <link rel="apple-touch-icon" href="apple-touch-icon.png" />
-      <link rel="shortcut icon" href="favicon.png" />
+    <link rel="stylesheet" href="css/impress-TFA.css"  />
+    <link rel="stylesheet" href="lib/faws/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="lib/animate.css"/>
+
     </head>
     <body ng-app>
       <div id="impress">
@@ -39,12 +38,12 @@
         <div id="concept" class="step opacity slide twoColm" data-x="0" data-y="700"  >
           <h3 class="title animated pulse">Why AngularJS?</h3>
           <ul class="em3">
-            <li>No external libraries </li>
+            <li class="substep">No external libraries </li>
             <ul>
-              <li>JQuery, Underscore etc..</li>
+              <li class="substep">JQuery, Underscore etc..</li>
             </ul>
-            <li>Magic tricks in HTML </li>
-            <li>Maintained and fully funded by Google!</li>
+            <li class="substep">Magic tricks in HTML </li>
+            <li class="substep">Maintained and fully funded by Google!</li>
           </ul>
           <!-- <img src="img/gitHubCompare.png" width="900" height="520" /> -->
         </div>
@@ -80,14 +79,14 @@
             </tr>
           </table>
         </div>
-        <div id="growth" class="step opacity slide" data-x="1100" data-y="700" data-z="900">
+        <div id="growth" class="step opacity slide" data-x="1100" data-y="700" data-z="2000">
           <h2 class=" animated pulse"><i class="fa fa-line-chart"></i> Growing</h2>
           <img src="img/googleTrend.png" width="900" height="500" />
         </div>
         <!--  End 4 slides  -->
+
         <!-- Get Ready  -->
         <div id="ready" class="step opacity em5" data-x="500" data-y="1800"  data-z="300" data-rotate="90" data-scale="3">
-          
           <i class="fa fa-comments-o fa-2x" style="color:white; "></i>
           <h6>YOU</h6>
           <h6>STILL</h6>
@@ -144,8 +143,33 @@
         <!-- HOW? -->
         <div id="how" class="step opacity code" data-x="-2700" data-y="5600"  data-rotate="180" data-z="1200" >
           <h2 class="em5 textCenter"> HOW <i class="fa fa-question-circle"></i></h2>
-          <img src="img/mvcR.png"  class="imgCenter" height="600" alt="">
+          <img src="img/scopeMV.png"  class="imgCenter" alt="">
         </div>
+
+        <!-- but! -->
+        <div id="but" class="step opacity code"  data-rotate-x="20" data-x="-2700" data-y="5600" data-z="-6200" >
+          <h1 class="margUp em12"> But...</h1>
+        </div>
+
+        <!-- why but -->
+        <div id="whyBut" class="step opacity code" data-rotate-x="180" data-x="-2700" data-y="5600"  data-rotate="180" data-z="-4200" >
+          <div class="bar em2"> 
+          <p>
+            <h1>As <span class="som">$scope</span> grow </h1>
+              <ul>
+                <img src="img/calendar.png" alt="">
+                <li class="substep">Slow performance</li>
+              </ul>
+              <h3 class="substep">Solutions: </h3>
+              <ul >
+                <li class="substep">Use in small data set </li>
+                <li class="substep">Use  <span class="som">$apply</span> to start or stop <span class="som">$scope</span></li>
+                <li class="substep">Use BackBone.js </li>
+              </ul>
+          </p>
+          </div>
+        </div>
+
         <!-- Template & Directives -->
         <div id="templateDirectives" class="step opacity words" data-x="0" data-y="2700" data-z="-2000" >
           <i class="fa fa-list-alt fa-5x" style="color:#5F5293;"></i>
@@ -153,35 +177,86 @@
           <div class="em4 textCenter ">&amp; </div>
           <div class="em9">Directives</div>
         </div>
-        <div id="detailTempDirec" class="step opacity code" data-x="-400" data-y="4200" data-rotate="90">
+
+        <div id="detailTempDirec" class="step opacity code" data-x="-200" data-y="4200" data-rotate="90">
           <ul class="bar em2 margUp">
             <h3>What are directives?</h3>
-            <li class="substep">A directive is a JavaScript object that generate a view</li>
-            <ul>
-              <li class="substep">You can reference to them by using HTML attribute</li>
-              <li class="substep">Built-in directives:  <span class="som">ngRepeat</span>, <span class="som">ngBind</span>, <span class="som">ngModel</span>, and <span class="som">ngClass</span></li>
-            </ul>
-            
+              <li class="substep">A directive is a JavaScript object that generate a view</li>
+              <ul>
+                <li class="substep">You can reference to them by using HTML attribute</li>
+                <li class="substep">Built-in directives:  <span class="som">ngRepeat</span>, <span class="som">ngBind</span>, <span class="som">ngModel</span>, and <span class="som">ngClass</span></li>
+              </ul>
           </ul>
         </div>
+
         <div id="ngRepeat" class="step opacity code" data-x="-200" data-y="4200"  data-z="-1500" data-rotate="90">
           <div class="bar">
-            <span class="som em3 ">ngRepeat</span>
-            <div class="clearFix"></div>
-            <div class="model">
-              <h2>
-              <i class="fa fa-repeat fa-2x"></i>
-              Loop over data
-              </h2>
-            </div>
-            <div class="model">
-              
-            </div>
+              <span class="som em3">ngRepeat</span>
+              <p class="em15">
+              The <span class="som">ngRpeat</span> loops over a collection of data. 
+                The same as <span class="som">for-loop</span>
+              </p>
+
+              <div class="clearfix"></div>
+              <!-- ngRepat example  -->
+              <div class="modelLeft">
+                <img src="img/ngRepeat.png" width="550px" alt="">
+              </div>
+
+              <div class="modelRight">
+                  <button class="em15" ng-click="state =! state">Call ngRepeat</button>
+                  <ul ng-init="list = ['angular','backbone','javascript', 'java', 'tfa']; state=false">  
+                    <li class="em15" ng-if="state" ng-repeat="elm in list ">
+                      {{elm | uppercase}}
+                    </li>
+                  </ul>
+              </div>
+              <div class="clearfix"></div>
           </div>
         </div>
-        <div id="howToWriteDirective" class="step opacity code" data-x="-200" data-y="4200"  data-z="-2000" data-rotate="90">
+
+
+
+        <!-- Filter example -->
+        <div id="filter" class="step opacity code" data-x="-200" data-y="4200"  data-z="-3000" data-rotate="90">
+          <div class="bar">
+              <span class="som em3">Filter</span>  
+              <div class="clearfix"></div>          
+              <div class="modelLeft">
+                  <ul>
+                    <li class="substep em15">
+                     <span class="som">filter</span> Selects a subset from  collection </li>
+                    <li class="substep em15">
+                      <span class="som">currency</span> Convert decimal to local currency
+                    </li>
+                    <li class="substep em15">
+                      <span class="som">orderBy</span> Arrange data base on specify expression
+                    </li>
+                  </ul>
+                  <img class="substep" src="img/filter1.png" width="500px" alt="">
+                  <img class="substep" src="img/filter.png" width="500px" alt="">
+              </div>
+              <div class="modelRight substep">
+                    Search:<input type="text" ng-model="search">
+                  <ul ng-init="list = ['angular','backbone','javascript', 'java', 'tfa']; state=false">  
+
+                    <li class="em15" ng-repeat="elm in list | filter:search">
+                      {{elm | uppercase}}
+                    </li>
+                  </ul>
+              </div>
+              <div class="clearfix"></div>
+              <div class="substep">
+                <h1>No need for</h1>
+                <img src="img/underscore.png" width="300" alt="">
+              </div>
+          </div>
+        </div>
+
+        <div id="howToWriteDirective" class="step opacity code" data-x="-200" data-y="5200"  data-z="-5000" data-rotate="90">
           <ul class="bar em15">
-            <h4>Steps</h4>
+            <h4>Built a directive</h4>
+
             <ol>
               <li>Create a directive</li>
               <ul>
@@ -190,17 +265,23 @@
               <li>Use directive</li>
               <ul>
                 <li>
+
                   <!--
                   <dir-name></dir-name>
                   <span dir-name="exp"></span>
-                  <span class="dir-name: exp;"></span> -->
+                  <span class="dir-name: exp;"></span> 
+                  -->
+
                   <!-- HTML generated using hilite.me -->
-                  <div style="background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .1em;padding:.2em .6em;">
-                          <pre style="margin: 0; line-height: 125%"><span style="color: #008000; font-weight: bold">&lt;dir</span><span style="color: #7D9029">-name</span><span style="color: #008000; font-weight: bold">&gt;</span><span style="color: #008000; font-weight: bold">&lt;/dir</span><span style="color: #7D9029">-name</span><span style="color: #008000; font-weight: bold">&gt;</span>
-        <span style="color: #008000; font-weight: bold">&lt;span</span> <span style="color: #7D9029">dir-name=</span><span style="color: #BA2121">&quot;exp&quot;</span><span style="color: #008000; font-weight: bold">&gt;&lt;/span&gt;</span>
-        <span style="color: #008000; font-weight: bold">&lt;span</span> <span style="color: #7D9029">class=</span><span style="color: #BA2121">&quot;dir-name: exp;&quot;</span><span style="color: #008000; font-weight: bold">&gt;&lt;/span&gt;</span>
-                  </pre></div>
+<!-- HTML generated using hilite.me --><div style="background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .1em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">
+<span style="color: #008000; font-weight: bold">&lt;dir</span><span style="color: #7D9029">-name</span><span style="color: #008000; font-weight: bold">&gt;</span><span style="color: #008000; font-weight: bold">&lt;/dir</span><span style="color: #7D9029">-name</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;span</span> <span style="color: #7D9029">dir-name=</span><span style="color: #BA2121">&quot;exp&quot;</span><span style="color: #008000; font-weight: bold">&gt;&lt;/span&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;span</span> <span style="color: #7D9029">class=</span><span style="color: #BA2121">&quot;dir-name: exp;&quot;</span><span style="color: #008000; font-weight: bold">&gt;&lt;/span&gt;</span>
+</pre></div>
+
                   <!-- HTML generated using hilite.me -->
+
+
                 </li>
               </ul>
             </ol>
@@ -208,20 +289,21 @@
         </div>
         <!-- Dependency Injection-->
         <div class="step opacity words" data-x="0"  data-y="3300" data-z="100" >
-<i class="fa fa fa-link fa-5x" style="color:#5F5293;"></i>
+          <i class="fa fa fa-link fa-5x" style="color:#5F5293;"></i>
           <div class="em7">Dependency</div>
           <div class="em9">Injection</div>
         </div>
 
-        <div id="inject" class="step opacity code" data-x="0"  data-y="3300" data-z="-10000" data-rotate="360">
-        <img src="img/inject.png"  class="imgCenter" height="600" alt="">
+        <div id="inject" class="step opacity margUp code" data-x="0"  data-y="3300" data-z="-10000" data-rotate="360">
+        <img src="img/inject.png"  class="imgCenter " height="400" alt="">
         </div>
-        <div id="Dependency" class="step opacity code" data-x="0"  data-y="4400" data-z="-11000" ng-scale="2" >
-        <h1>The key elements in here: </h1>
+        <div id="Dependency" class="step margUp opacity code" data-x="0"  data-y="4400" data-z="-11000" ng-scale="2" >
+        <h1>Dependency Injection Provide: </h1>
           <div class="bar em2">
             <ul>
-              <li>Reusable Code</li>
-              <li>Simpler dependency resolution via Dependency Injection </li>
+              <li class="substep">Reusable Code between programs</li>
+              <li class="substep">Simpler dependency resolution via DI </li>
+              <li class="substep"> Single responsibility principle</li>
             </ul>
           </div>
         </div>
@@ -242,12 +324,38 @@
               <li>Automation</li>
             </ul>
             <div class="imgCenter" style="margin-left: 100px">
-              <img src="img/jasmineLogo.png" width="175" height="120" alt="">
-              <img src="img/karamaLogo.png" width="300" alt="">
+                <img class="substep" src="img/jasmineLogo.png" width="175" height="120" alt="">
+                <i class="substep colorTitle fa fa-arrow-circle-right fa-1x"></i>
+                <img class="substep karma"  src="img/karamaLogo.png" width="300" alt="">
+
+            </div>
+
+            <div class="substep fly">
+              <div class="goFlyFire"></div>
+              <div class="fa fa-rocket fa-2x"></div>
             </div>
           </div>
         </div>
 
+        <!-- Test All -->
+        <div id="TestAll" class="step opacity code" data-x="1000"   data-y="4400" >
+            <div class="land em2">
+              <div class="goFlyFire"></div>
+              <div class="fa fa-rocket fa-2x"></div>
+            </div>
+              <div class="">
+                <h3 class="em2 textCenter">TEST FOR ALL</h3>
+                <img class="substep imgCenter" src="img/devices.png" alt="">
+                <div class="substep imgBrowser imgCenter"></div>
+                <div class="substep explode"></div>
+                <div class="substep "></div>
+                <!-- to make an affect  -->
+              </div>
+        </div>
+
+
+
+<!-- The End -->
         <div id="end" class="step opacity code" data-x="3300" data-y="3000"  >
           <h1 class="textCenter  em6 colorTitle underline">Thank You</h1>
           <div class="endList ">
@@ -260,12 +368,12 @@
               <ul>
                 <li><a href="http://nodejs.org/">nodejs.org</a></li>
               </ul>
-            </ul>
+          </ul>
           </div>
         </div>
 
         </div>  <!-- end of .impress -->
-        <script src="lib/impress.js"></script>
+        <script src="lib/iimpress.js"></script>
         <script src="lib/jquery-2.1.1.min.js"></script>
         <script src="lib/angular.min.js"></script>
         <script src="js/custom.js"></script>
