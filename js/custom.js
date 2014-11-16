@@ -49,7 +49,7 @@ $(document).ready(function() {
         $("#why.active .fa").addClass("animated tada");
 
         // Test for all 
-        $("#TestAll.present .land").animate({
+        $("#testAll.present .land").animate({
             "top": "-30",
             "left": "30%"
         }, 1000);
@@ -99,7 +99,7 @@ $(document).ready(function() {
         $("#why.past .fa").removeClass("animated tada");
 
         //returns back the rocket in TestAll
-        $("#TestAll.past .land").animate({
+        $("#testAll.past .land").animate({
             "top": "60%",
             "left": "70px",
             "opacity": "1"
@@ -110,7 +110,7 @@ $(document).ready(function() {
     window.addEventListener('impress:substep-active', function() {
         $(".fly.present").animate({
             "top": "-20px",
-            "left": "120%",
+            "left": "140%",
         }, 200);
 
         //explode subset is reached
