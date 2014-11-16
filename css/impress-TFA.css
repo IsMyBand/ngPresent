@@ -96,12 +96,12 @@ body{
 
 .modelLeft{
   float: left; 
-  width: 50%;
+  width: 55%;
   padding: 10px; 
 }
 .modelRight{
   float: right; 
-  width: 35%;
+  width: 30%;
   padding: 10px; 
 }
 
@@ -133,7 +133,7 @@ button:active{
 }
 table {
   width:100%;
-  
+
 }
 table, th, td {
   border: 1px solid rgb(189, 189, 189);
@@ -180,7 +180,7 @@ table th {
   list-style-type: none;
   font-size: 2em; 
   color: #620A0A; 
-  
+
 }
 .endList a, a:active, a:visited, a:focus{
   text-decoration: none;
@@ -308,8 +308,9 @@ table th {
     height: 50px;
     position: absolute; 
     top: 35px;
-    -webkit-transform: rotateX(45deg);
+    -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
+    -o-transform:rotate(45deg);
     transform: rotate(45deg);
     border-left: 20px solid yellow; 
     border-radius:  0  0 0 5px ; 
@@ -319,7 +320,9 @@ table th {
     top: 60%;
     left: 70px;
     color: #ce5424; 
-    -webkit-transform: rotateX(45deg);
+      -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
+     -o-transform: rotate(45deg);
     transform: rotate(45deg);
   }
+

@@ -6,23 +6,23 @@ $(document).ready(function() {
 
         // #Ready starts animation
         $('#ready.active').parents().find(".oneColm").animate({
-            top: "-50px",
-            opacity: .7
+            "top": "-50px",
+            "opacity": .7
         }, 250);
 
         $('#ready.active').parents().find(".twoColm").animate({
-            top: "-500px",
-            opacity: 1
+            "top": "-500px",
+            "opacity": 1
         }, 250);
 
         $('#ready.active').animate({
-            top: "-700px"
+            "top": "-700px"
         }, 450).find(".fa-comments-o").show().addClass("animated bounceInRight");
 
 
         // #Compare start animation 
         $('#compare.active').parents('body').find("#twoWay").css({
-            opacity: 1
+            "opacity": 1
         });
 
         // template 
@@ -33,10 +33,10 @@ $(document).ready(function() {
         $('#twoWay.active .fa-exchange').css("position", "relative")
             .show()
             .animate({
-                left: "626px"
+                "left": "626px"
             }, 900)
             .animate({
-                left: "0"
+                "left": "0"
             }, 900);
 
         $("#compare.active .vsDivider").addClass("animated rotateIn");
@@ -50,11 +50,11 @@ $(document).ready(function() {
 
         // Test for all 
         $("#TestAll.present .land").animate({
-            top: "-30",
-            left: "30%"
+            "top": "-30",
+            "left": "30%"
         }, 1000);
 
-     
+
 
 
     });
@@ -65,11 +65,11 @@ $(document).ready(function() {
         //Ready Animation returns back 
         $('#ready.past').parents("body").find(".slide")
             .animate({
-                top: "0"
+                "top": "0"
             }, 1300).css("opacity", "");
 
         $('#ready.past').animate({
-            top: "0"
+            "top": "0"
         }, 1000);
 
         $('#ready.past .fa-comments-o').hide().removeClass("animated bounceInRight");
@@ -100,28 +100,70 @@ $(document).ready(function() {
 
         //returns back the rocket in TestAll
         $("#TestAll.past .land").animate({
-            top: "60%",
-            left: "70px"
+            "top": "60%",
+            "left": "70px",
+            "opacity": "1"
         }, 1000);
     });
 
     //entering state (substep)
-    window.addEventListener('impress:substep-active', function () {
+    window.addEventListener('impress:substep-active', function() {
         $(".fly.present").animate({
-            top: "-20px",
-            left: "140%",
+            "top": "-20px",
+            "left": "120%",
         }, 200);
-        $(".explode.present").parent().find(".imgBrowser").hide();
+
+        //explode subset is reached
+        var browserDiv = $(".explode.present").parents();   
+
+        var rocketDiv = browserDiv.find('.land');
+        //get ready position
+        rocketDiv.css({
+            "-webkit-transform": "rotate(80deg)",
+            "-ms-transform": "rotate(80deg)",
+            "-o-transform": "rotate(80deg)",
+            "transform": "rotate(80deg)"
+        });
+        //go kill ie 
+        rocketDiv.animate({
+            "top": "65%",
+            "left": "470px",
+            "opacity": 0
+        }, 900);
+        //browser explosion occur here
+        var browserExplod = "./img/browserExplosion.gif";
+
+        browserDiv.find(".imgBrowser").css({
+            "background": "url(" + browserExplod + ") no-repeat center",
+            "opacity": 1
+        });
+
     });
 
     //leaving state (substep)
-    window.addEventListener('impress:substep-inactive', function () {
+    window.addEventListener('impress:substep-inactive', function() {
         // $(".explode.past").parent().find(".imgBrowser").show();
         $('.fly.future').css({
-                    top: "60%",
-                    left: "70px"
-                });
+            "top": "60%",
+            "left": "70px"
+        });
+
     });
 
-
 });
+
+
+
+
+
+
+    // var browserLink = "./img/browser.png";
+
+    //     $('.fly.future').browserDiv.css(
+    //         "background", "url(" + browserLink + ") no-repeat center")
+
+
+    //              "-webkit-transform": "rotate(45deg)",
+    //         "-ms-transform": "rotate(45deg)",
+    //         "-o-transform": "rotate(45deg)",
+    //         "transform": "rotate(45deg)",
